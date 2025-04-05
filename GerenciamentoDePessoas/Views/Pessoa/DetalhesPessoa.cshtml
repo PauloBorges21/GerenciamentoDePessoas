@@ -1,0 +1,16 @@
+﻿@model List<Pessoa>
+<h1>Detalhes de Usuário </h1>
+<h2>@ViewBag.texto</h2>
+<h3>@ViewData["puxa"]</h3>
+
+
+@foreach (var pessoa in Model)
+{
+    <p>ID: @pessoa.Id</p>
+    <p>Nome: @pessoa.Nome</p>
+    <p>Sobrenome: @pessoa.Sobrenome</p>
+    <p>Data de Nascimento: @pessoa.DataNascimento</p>
+}
+
+
+
