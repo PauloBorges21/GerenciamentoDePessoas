@@ -14,11 +14,13 @@ namespace GerenciamentoDePessoas.Controllers
         }
 
         [Route("Inicio")]
-        public IActionResult Index()
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
             //ViewBag.texto = TempData["SucessoRedirecionamento"];
             ViewBag.Cadastro = TempData["SucessoCriacao"];
-            return View();
+            var listarPessoas = await _pessoasService.ListarTodos();
+            return View(listarPessoas);
         }
 
         [Route("Detalhes/{id:int}")]
