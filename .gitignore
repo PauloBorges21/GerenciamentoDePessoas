@@ -1,0 +1,62 @@
+## Ignore arquivos do Visual Studio ##
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Build Results ##
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+*.log
+
+## Arquivos de dependência ##
+*.nupkg
+packages/
+*.dll
+*.exe
+
+## Arquivos gerados por ferramentas ##
+*.cache
+*.dbmdl
+*.pdb
+*.mdb
+
+## Configurações locais ##
+*.localsettings.json
+appsettings.*.json
+appsettings.Development.json
+
+## Arquivos do Rider/JetBrains ##
+.idea/
+*.sln.iml
+
+## Teste e resultados ##
+TestResults/
+*.coverage
+*.coveragexml
+
+## Arquivos temporários ##
+*.tmp
+*.temp
+~$*
+*.bak
+*.swp
+
+## Sistema operacional ##
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## Git ##
+*.orig
+
+## Arquivos do Copilot ##
+CopilotIndices/
+
+## Outros ##
+_ReSharper*/
+*.resharper
+*.DotSettings.user
