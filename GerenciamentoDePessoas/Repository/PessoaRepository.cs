@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GerenciamentoDePessoas.Repository
 {
-    public class PessoaRepository :IPessoaRepository
+    public class PessoaRepository : IPessoaRepository
     {
         private readonly GerenciamentoDePessoasContext _contexto;
 
@@ -14,9 +14,31 @@ namespace GerenciamentoDePessoas.Repository
             _contexto = context;
         }
         public async Task<List<Pessoa>> BuscarTodos()
-    {
-           var usuariosBanco = await _contexto.Pessoas.ToListAsync();
-           return usuariosBanco;
+        {
+            var usuariosBanco = await _contexto.Pessoas.ToListAsync();
+            return usuariosBanco;
+        }
+
+        public async Task<Pessoa> CriarUsuario(Pessoa pessoa)
+        {
+            try
+            {
+                await _contexto.Pessoas.AddAsync(pessoa);
+                await _contexto.SaveChangesAsync();
+                return pessoa;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Ocorreu um erro no banco de dados:{ex.Message}");
+            }
+
+        }
+
+        public async Task<bool> VerificarPessoaExiste(string CPF)
+        {
+            var usuarioExiste = await _contexto.Pessoas
+                .AnyAsync(p => p.CPF == CPF);
+            return usuarioExiste;
         }
     }
 }

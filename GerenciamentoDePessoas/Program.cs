@@ -1,4 +1,5 @@
 using GerenciamentoDePessoas.Data;
+using GerenciamentoDePessoas.Repository;
 using GerenciamentoDePessoas.Services;
 using Microsoft.EntityFrameworkCore;
 

@@ -1,6 +1,7 @@
 ﻿using GerenciamentoDePessoas.Models;
 using GerenciamentoDePessoas.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace GerenciamentoDePessoas.Controllers
 {
@@ -23,6 +24,38 @@ namespace GerenciamentoDePessoas.Controllers
             return View(listarPessoas);
         }
 
+        [HttpGet]
+        [Route("CriarUsuario")]
+        public IActionResult CriarUsuario()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("CriarUsuario")]
+        public async Task<IActionResult> CriarUsuario(Pessoa pessoa)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var usuario = await _pessoasService.CriarUsuario(pessoa);
+                    TempData["SucessoCriacao"] = $"O usuário {pessoa.Nome} {pessoa.Sobrenome} cadastrado com sucesso";
+                    return RedirectToAction("Index");
+                }
+
+                return View(pessoa);
+            }
+            catch (Exception ex)
+            {
+                TempData["ErroCriacao"] = $"Erro ao cadastrar:( {ex.Message} )";
+                throw;
+            }
+
+
+
+        }
+
         [Route("Detalhes/{id:int}")]
         public IActionResult DetalhesPessoa(int id)
         {
@@ -43,7 +76,7 @@ namespace GerenciamentoDePessoas.Controllers
 
         [HttpGet]
         [Route("BuscaPorUrl")]
-        public IActionResult BuscaPorUrl(string nome , string sobrenome)
+        public IActionResult BuscaPorUrl(string nome, string sobrenome)
         {
             var listaUsuario = new List<Pessoa>
             {
@@ -53,30 +86,11 @@ namespace GerenciamentoDePessoas.Controllers
                 new Pessoa { Id = 4, Nome = "Paulo", Sobrenome = "Silva", DataNascimento = DateTime.Now }
             };
 
-            var pessoaSelecionada = listaUsuario.FirstOrDefault(n=>n.Nome == nome && n.Sobrenome == sobrenome);
+            var pessoaSelecionada = listaUsuario.FirstOrDefault(n => n.Nome == nome && n.Sobrenome == sobrenome);
 
             return View(pessoaSelecionada);
         }
 
-        [HttpGet]
-        [Route("CriarUsuario")]
-        public IActionResult CriarUsuario()
-        {
-            return View();
-        }
 
-        [HttpPost]
-        [Route("CriarUsuario")]
-        public IActionResult CriarUsuario(Pessoa pessoa)
-        {
-            if(ModelState.IsValid)
-            {
-                TempData["SucessoCriacao"] = $"O usuário {pessoa.Nome} {pessoa.Sobrenome} cadastrado com sucesso";
-                return RedirectToAction("Index");
-            }
-
-            return View(pessoa);
-            
-        }
     }
 }

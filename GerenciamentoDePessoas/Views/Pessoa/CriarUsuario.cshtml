@@ -1,6 +1,13 @@
 ﻿@using GerenciamentoDePessoas.Models.Enum
-﻿@model Pessoa
+@model GerenciamentoDePessoas.Models.Pessoa
 <h1>Criar Usuário</h1>
+
+@if (TempData["ErroCriacao"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["ErroCriacao"]
+    </div>
+}
 
 <form>
     <div class="form-group">
@@ -43,15 +50,15 @@
         <span asp-validation-for="TipoSanguineo" class="text-danger"></span>
     </div>
 
-     <label>Sobrenome</label>
-     <input type="text" asp-for="Sobrenome" />
+    <label>Sobrenome</label>
+    <input type="text" asp-for="Sobrenome" />
     <span asp-validation-for="Sobrenome" style="color:red"></span>
     <label>Data de Nascimento</label>
     <input type="date" asp-for="DataNascimento" />
     <span asp-validation-for="DataNascimento" style="color:red"></span>
-     <br />
-     <button type="submit">Cadastrar </button>
- </form>
+    <br />
+    <button type="submit">Cadastrar </button>
+</form>
 
 @* @using (Html.BeginForm("CriarUsuario", "Pessoa", FormMethod.Post))
 {
@@ -68,4 +75,4 @@
         <button type="submit">Cadastrar</button>
     </div>
 } *@
-   @Html.ActionLink("Tela de início","Index","Home")
+@Html.ActionLink("Tela de início", "Index", "Home")
