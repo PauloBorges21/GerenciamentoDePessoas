@@ -11,8 +11,12 @@ namespace GerenciamentoDePessoas
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            //builder.Services.AddDbContext<GerenciamentoDePessoasContext>(options =>
+            //options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoPadrao")));
+
             builder.Services.AddDbContext<GerenciamentoDePessoasContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoPadrao")));
+            options.UseNpgsql(builder.Configuration.GetConnectionString("ConexaoPadrao")));
+
 
             builder.Services.AddControllersWithViews();
 

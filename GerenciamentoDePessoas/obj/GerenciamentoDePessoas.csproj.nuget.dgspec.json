@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\paulo\\source\\repos\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\GerenciamentoDePessoas.csproj": {}
+    "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\GerenciamentoDePessoas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\paulo\\source\\repos\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\GerenciamentoDePessoas.csproj": {
+    "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\GerenciamentoDePessoas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\paulo\\source\\repos\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\GerenciamentoDePessoas.csproj",
+        "projectUniqueName": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\GerenciamentoDePessoas.csproj",
         "projectName": "GerenciamentoDePessoas",
-        "projectPath": "C:\\Users\\paulo\\source\\repos\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\GerenciamentoDePessoas.csproj",
+        "projectPath": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\GerenciamentoDePessoas.csproj",
         "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\paulo\\source\\repos\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\obj\\",
+        "outputPath": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -71,6 +71,22 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL.Design": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime": {
+              "target": "Package",
+              "version": "[9.0.4, )"
             }
           },
           "imports": [

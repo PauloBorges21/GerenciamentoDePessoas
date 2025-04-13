@@ -18,7 +18,7 @@ namespace GerenciamentoDePessoas.Services
             return usuariosBanco;
         }
 
-        public async Task<Pessoa> CriarUsuario(Pessoa pessoa)
+        public async Task<Pessoa> Criar(Pessoa pessoa)
         {
             if (pessoa == null || pessoa.CPF == null)
             {
@@ -30,7 +30,7 @@ namespace GerenciamentoDePessoas.Services
             {
                 throw new Exception("Usuário já esta cadastrado no sistema.");
             }
-            await _pessoaRepository.CriarUsuario(pessoa);
+            await _pessoaRepository.Criar(pessoa);
             return pessoa;
         }
     }

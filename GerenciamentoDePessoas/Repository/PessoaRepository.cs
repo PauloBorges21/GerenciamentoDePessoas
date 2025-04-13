@@ -19,7 +19,7 @@ namespace GerenciamentoDePessoas.Repository
             return usuariosBanco;
         }
 
-        public async Task<Pessoa> CriarUsuario(Pessoa pessoa)
+        public async Task<Pessoa> Criar(Pessoa pessoa)
         {
             try
             {
@@ -34,10 +34,10 @@ namespace GerenciamentoDePessoas.Repository
 
         }
 
-        public async Task<bool> VerificarPessoaExiste(string CPF)
+        public async Task<bool> VerificarPessoaExiste(string cpf)
         {
             var usuarioExiste = await _contexto.Pessoas
-                .AnyAsync(p => p.CPF == CPF);
+                .AnyAsync(p => p.CPF == cpf);
             return usuarioExiste;
         }
     }

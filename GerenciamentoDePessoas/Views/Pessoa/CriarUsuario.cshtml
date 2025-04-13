@@ -9,7 +9,7 @@
     </div>
 }
 
-<form>
+<form asp-action="Criar" asp-controller="Pessoa" method="post">
     <div class="form-group">
         <label for="nome">Nome</label>
         <input type="text" asp-for="Nome" class="form-control" id="nome" placeholder="Nome">
@@ -34,7 +34,7 @@
 
     <div class="form-group">
         <label for="tipoSanguineo">Tipo Sanguíneo</label>
-        <select class="custom-select" asp-for="TipoSanguineo">
+        <select class="form-control" asp-for="TipoSanguineo">
             @foreach (var tipo in Enum.GetValues(typeof(ETipoSanguineo)))
             {
                 if (Model?.TipoSanguineo == (ETipoSanguineo)tipo)
@@ -49,15 +49,7 @@
         </select>
         <span asp-validation-for="TipoSanguineo" class="text-danger"></span>
     </div>
-
-    <label>Sobrenome</label>
-    <input type="text" asp-for="Sobrenome" />
-    <span asp-validation-for="Sobrenome" style="color:red"></span>
-    <label>Data de Nascimento</label>
-    <input type="date" asp-for="DataNascimento" />
-    <span asp-validation-for="DataNascimento" style="color:red"></span>
-    <br />
-    <button type="submit">Cadastrar </button>
+    <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 
 @* @using (Html.BeginForm("CriarUsuario", "Pessoa", FormMethod.Post))

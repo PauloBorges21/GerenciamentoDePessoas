@@ -32,14 +32,14 @@ namespace GerenciamentoDePessoas.Controllers
         }
 
         [HttpPost]
-        [Route("CriarUsuario")]
-        public async Task<IActionResult> CriarUsuario(Pessoa pessoa)
+        [Route("Criar")]
+        public async Task<IActionResult> Criar(Pessoa pessoa)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    var usuario = await _pessoasService.CriarUsuario(pessoa);
+                    var usuario = await _pessoasService.Criar(pessoa);
                     TempData["SucessoCriacao"] = $"O usuário {pessoa.Nome} {pessoa.Sobrenome} cadastrado com sucesso";
                     return RedirectToAction("Index");
                 }

@@ -5,6 +5,6 @@
     public interface IPessoaService
     {
         Task<List<Pessoa>> ListarTodos();
-        Task<Pessoa> CriarUsuario(Pessoa pessoa);
+        Task<Pessoa> Criar(Pessoa pessoa);
     }
 }
