@@ -13,6 +13,7 @@ namespace GerenciamentoDePessoas.Repository
         {
             _contexto = context;
         }
+
         public async Task<List<Pessoa>> BuscarTodos()
         {
             var usuariosBanco = await _contexto.Pessoas.ToListAsync();
@@ -39,6 +40,23 @@ namespace GerenciamentoDePessoas.Repository
             var usuarioExiste = await _contexto.Pessoas
                 .AnyAsync(p => p.CPF == cpf);
             return usuarioExiste;
+        }
+
+        public async Task<Pessoa> BuscarPorId(int id)
+        {
+            try
+            {
+                var pessoaDB = await _contexto.Pessoas.FirstOrDefaultAsync(p => p.Id == id);
+                if (pessoaDB == null)
+                {
+                    throw new Exception("Pessoa não encontrada.");
+                }
+                return pessoaDB;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

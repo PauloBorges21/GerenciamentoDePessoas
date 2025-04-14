@@ -33,5 +33,11 @@ namespace GerenciamentoDePessoas.Services
             await _pessoaRepository.Criar(pessoa);
             return pessoa;
         }
+
+        public async Task<Pessoa> BuscarPorId(int id)
+        {
+            return await _pessoaRepository.BuscarPorId(id);
+
+        }
     }
 }

@@ -24,15 +24,13 @@ namespace GerenciamentoDePessoas.Controllers
             return View(listarPessoas);
         }
 
-        [HttpGet]
-        [Route("CriarUsuario")]
-        public IActionResult CriarUsuario()
+        [HttpGet("Criar")]
+        public IActionResult Criar()
         {
             return View();
         }
 
-        [HttpPost]
-        [Route("Criar")]
+        [HttpPost("Criar")]
         public async Task<IActionResult> Criar(Pessoa pessoa)
         {
             try
@@ -48,11 +46,32 @@ namespace GerenciamentoDePessoas.Controllers
             }
             catch (Exception ex)
             {
-                TempData["ErroCriacao"] = $"Erro ao cadastrar:( {ex.Message} )";
-                throw;
+                TempData["ErroCriacao"] = $"Erro ao cadastrar: ({ex.Message})";
+                return View(pessoa);
             }
 
 
+
+        }
+
+        [HttpGet("Editar/{id}")]
+        public async Task<IActionResult> Editar(int id)
+        {
+            try
+            {
+                if (id == 0)
+                {
+                    throw new Exception("Um Id deve ser informado.");
+                }
+
+                var pessoaDb = await _pessoasService.BuscarPorId(id);
+                return View(pessoaDb);
+            }
+            catch (Exception ex)
+            {
+                TempData["ErroCriacao"] = $"Erro ao editar: ({ex.Message})";
+                return View();
+            }
 
         }
 

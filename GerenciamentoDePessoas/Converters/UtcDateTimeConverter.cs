@@ -6,11 +6,9 @@ namespace GerenciamentoDePessoas.Converters
     {
         public UtcDateTimeConverter() : base(
             v => v.Kind == DateTimeKind.Utc ? v : v.ToUniversalTime(),
-            v => DateTime.SpecifyKind(v, DateTimeKind.Utc)
-            )
+            v => DateTime.SpecifyKind(v, DateTimeKind.Utc))
         {
 
         }
-
     }
 }
