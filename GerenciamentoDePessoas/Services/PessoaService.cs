@@ -39,5 +39,11 @@ namespace GerenciamentoDePessoas.Services
             return await _pessoaRepository.BuscarPorId(id);
 
         }
+
+        public async Task<Pessoa> Editar(Pessoa pessoa)
+        {
+            await _pessoaRepository.BuscarPorId(pessoa.Id);
+            return await _pessoaRepository.Editar(pessoa);
+        }
     }
 }

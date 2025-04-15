@@ -9,7 +9,8 @@
     </div>
 }
 
-<form asp-action="Editar" asp-controller="Pessoa" method="post">
+<form asp-action="Editar" asp-controller="Pessoa" asp-route-id="" method="post">
+    <input type="hidden" asp-for="Id" />
     <div class="form-group">
         <label for="nome">Nome</label>
         <input type="text" asp-for="Nome" class="form-control" id="nome" placeholder="Nome">

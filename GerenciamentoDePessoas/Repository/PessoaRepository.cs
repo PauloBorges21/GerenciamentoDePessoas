@@ -7,16 +7,16 @@ namespace GerenciamentoDePessoas.Repository
 {
     public class PessoaRepository : IPessoaRepository
     {
-        private readonly GerenciamentoDePessoasContext _contexto;
+        private readonly GerenciamentoDePessoasContext _context;
 
         public PessoaRepository(GerenciamentoDePessoasContext context)
         {
-            _contexto = context;
+            _context = context;
         }
 
         public async Task<List<Pessoa>> BuscarTodos()
         {
-            var usuariosBanco = await _contexto.Pessoas.ToListAsync();
+            var usuariosBanco = await _context.Pessoas.ToListAsync();
             return usuariosBanco;
         }
 
@@ -24,8 +24,8 @@ namespace GerenciamentoDePessoas.Repository
         {
             try
             {
-                await _contexto.Pessoas.AddAsync(pessoa);
-                await _contexto.SaveChangesAsync();
+                await _context.Pessoas.AddAsync(pessoa);
+                await _context.SaveChangesAsync();
                 return pessoa;
             }
             catch (Exception ex)
@@ -37,16 +37,18 @@ namespace GerenciamentoDePessoas.Repository
 
         public async Task<bool> VerificarPessoaExiste(string cpf)
         {
-            var usuarioExiste = await _contexto.Pessoas
+            var pessoaExiste = await _context.Pessoas
                 .AnyAsync(p => p.CPF == cpf);
-            return usuarioExiste;
+            return pessoaExiste;
         }
 
         public async Task<Pessoa> BuscarPorId(int id)
         {
             try
             {
-                var pessoaDB = await _contexto.Pessoas.FirstOrDefaultAsync(p => p.Id == id);
+                var pessoaDB = await _context.Pessoas
+                    .AsNoTracking()
+                    .FirstOrDefaultAsync(p => p.Id == id);
                 if (pessoaDB == null)
                 {
                     throw new Exception("Pessoa não encontrada.");
@@ -57,6 +59,22 @@ namespace GerenciamentoDePessoas.Repository
             {
                 throw;
             }
+        }
+
+        public async Task<Pessoa> Editar(Pessoa pessoa)
+        {
+            try
+            {
+                _context.Pessoas.Update(pessoa);
+                await _context.SaveChangesAsync();
+                return pessoa;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace GerenciamentoDePessoas.Controllers
 {
-    [Route("Usuario")]
+    [Route("Pessoa")]
     public class PessoaController : Controller
     {
         private readonly IPessoaService _pessoasService;
@@ -54,6 +54,28 @@ namespace GerenciamentoDePessoas.Controllers
 
         }
 
+        [HttpPost("Editar")]
+        public async Task<ActionResult> Editar(Pessoa pessoa)
+        {
+            try
+            {
+                if (pessoa.Id == 0)
+                {
+                    throw new Exception("Um Id deve ser informado.");
+                }
+
+                var pessoaDb = await _pessoasService.Editar(pessoa);
+                TempData["SucessoCriacao"] = $"Pessoa {pessoa.Nome} foi atualizada com sucesso";
+                return RedirectToAction("Index","Pessoa");
+            }
+            catch (Exception ex)
+            {
+                TempData["ErroEditar"] = $"Erro ao editar: ({ex.Message})";
+                return RedirectToAction("Index", "Pessoa");
+            }
+
+        }
+
         [HttpGet("Editar/{id}")]
         public async Task<IActionResult> Editar(int id)
         {
@@ -69,11 +91,11 @@ namespace GerenciamentoDePessoas.Controllers
             }
             catch (Exception ex)
             {
-                TempData["ErroCriacao"] = $"Erro ao editar: ({ex.Message})";
-                return View();
+                TempData["ErroEditar"] = $"Erro ao editar: ({ex.Message})";
+                return RedirectToAction("Index", "Pessoa");
             }
 
-        }
+        }        
 
         [Route("Detalhes/{id:int}")]
         public IActionResult DetalhesPessoa(int id)
