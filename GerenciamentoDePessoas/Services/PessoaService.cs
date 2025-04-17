@@ -45,5 +45,12 @@ namespace GerenciamentoDePessoas.Services
             await _pessoaRepository.BuscarPorId(pessoa.Id);
             return await _pessoaRepository.Editar(pessoa);
         }
+
+        public async Task Apagar(int id)
+        {
+            var pessoa = await _pessoaRepository.BuscarPorId(id);
+            await _pessoaRepository.Apagar(pessoa);
+        }
+
     }
 }

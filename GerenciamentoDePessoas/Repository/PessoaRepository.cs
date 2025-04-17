@@ -74,7 +74,22 @@ namespace GerenciamentoDePessoas.Repository
 
                 throw;
             }
-            
+
+        }
+
+        public async Task Apagar(Pessoa pessoa)
+        {
+            try
+            {
+                _context.Pessoas.Remove(pessoa);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
     }
 }

@@ -66,7 +66,29 @@ namespace GerenciamentoDePessoas.Controllers
 
                 var pessoaDb = await _pessoasService.Editar(pessoa);
                 TempData["SucessoCriacao"] = $"Pessoa {pessoa.Nome} foi atualizada com sucesso";
-                return RedirectToAction("Index","Pessoa");
+                return RedirectToAction("Index", "Pessoa");
+            }
+            catch (Exception ex)
+            {
+                TempData["ErroEditar"] = $"Erro ao editar: ({ex.Message})";
+                return RedirectToAction("Index", "Pessoa");
+            }
+
+        }
+
+        [HttpPost("Apagar")]
+        public async Task<ActionResult> Apagar(int id)
+        {
+            try
+            {
+                if (id == 0)
+                {
+                    throw new Exception("Um Id deve ser informado.");
+                }
+
+                await _pessoasService.Apagar(id);
+                TempData["SucessoCriacao"] = $"Pessoa foi deletada com sucesso";
+                return RedirectToAction("Index", "Pessoa");
             }
             catch (Exception ex)
             {
@@ -95,7 +117,7 @@ namespace GerenciamentoDePessoas.Controllers
                 return RedirectToAction("Index", "Pessoa");
             }
 
-        }        
+        }
 
         [Route("Detalhes/{id:int}")]
         public IActionResult DetalhesPessoa(int id)
