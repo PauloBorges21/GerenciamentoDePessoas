@@ -7,15 +7,23 @@ namespace GerenciamentoDePessoas.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        public HomeController(ILogger<HomeController> logger, IWebHostEnvironment webHostEnvironment)
         {
             _logger = logger;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         public IActionResult Index()
         {
-            return View();
+            string caminhoPasta = Path.Combine(_webHostEnvironment.WebRootPath, "images");
+
+            var nomeImagens = Directory
+                .EnumerateFiles(caminhoPasta)
+                .Select(Path.GetFileName)
+                .ToList();
+
+            return View(nomeImagens);
         }
 
         public IActionResult Privacy()

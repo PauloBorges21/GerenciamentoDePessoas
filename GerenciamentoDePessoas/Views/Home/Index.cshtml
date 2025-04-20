@@ -1,23 +1,11 @@
-﻿@{
+﻿@model List<string>
+
+@{
     ViewData["Title"] = "Início";
 }
 
-<div class="cointainer">
-    <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-1 col-xl-4 border border-primary">
-            <label>Nome:</label>
-            <input type="text">
-        </div>
-        <div class="col-sm-12 col-md-3 col-lg-1 col-xl-4 border border-primary">
-            <label>Sobrenome:</label>
-            <input type="text">
-        </div>
 
-        <div class="col-sm-12 col-md-3 col-lg-10 col-xl-4 border border-primary">
-            <label>Data de nascimento:</label>
-            <input type="date">
-        </div>
+@* @await Html.PartialAsync("Partial/_BoasVindas"); *@
+<partial name="Partial/_BoasVindas" />
 
-    </div>
-
-</div>
+<partial name="Partial/_Carrossel" model="Model" />

@@ -13,6 +13,22 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\images\\1-vetor.jpg",
+      "PackagePath": "staticwebassets\\images\\1-vetor.jpg"
+    },
+    {
+      "Id": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\images\\2-vetor.jpg",
+      "PackagePath": "staticwebassets\\images\\2-vetor.jpg"
+    },
+    {
+      "Id": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\images\\3-vetor.jpg",
+      "PackagePath": "staticwebassets\\images\\3-vetor.jpg"
+    },
+    {
+      "Id": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\images\\4-vetor.jpg",
+      "PackagePath": "staticwebassets\\images\\4-vetor.jpg"
+    },
+    {
       "Id": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

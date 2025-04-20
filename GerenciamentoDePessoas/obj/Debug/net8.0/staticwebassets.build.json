@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JXEnWItp962N83QJPXQfrqr+Km9VYYGMikXifAIdSto=",
+  "Hash": "BwyXdwxOIeNVq30HWbJAx85zI3bNN4pCwfe4Tnm7/IQ=",
   "Source": "GerenciamentoDePessoas",
   "BasePath": "_content/GerenciamentoDePessoas",
   "Mode": "Default",
@@ -101,6 +101,90 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\images\\1-vetor.jpg",
+      "SourceId": "GerenciamentoDePessoas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\",
+      "BasePath": "_content/GerenciamentoDePessoas",
+      "RelativePath": "images/1-vetor#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nzynmwaqe9",
+      "Integrity": "44aUjskRk51roTPLRv6hAofYLkcrA3NgkqLax5rf39Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\1-vetor.jpg"
+    },
+    {
+      "Identity": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\images\\2-vetor.jpg",
+      "SourceId": "GerenciamentoDePessoas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\",
+      "BasePath": "_content/GerenciamentoDePessoas",
+      "RelativePath": "images/2-vetor#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qb3iztn7yw",
+      "Integrity": "qldNtZazjTnHdRBjQitFhrOHYOC1KMyzAaX/pUmQtRE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\2-vetor.jpg"
+    },
+    {
+      "Identity": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\images\\3-vetor.jpg",
+      "SourceId": "GerenciamentoDePessoas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\",
+      "BasePath": "_content/GerenciamentoDePessoas",
+      "RelativePath": "images/3-vetor#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bqaill5sli",
+      "Integrity": "0/+9+WoMvMt0ifuLchowkzCT4QHZ7Xe0FGPvjdet+SA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\3-vetor.jpg"
+    },
+    {
+      "Identity": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\images\\4-vetor.jpg",
+      "SourceId": "GerenciamentoDePessoas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\",
+      "BasePath": "_content/GerenciamentoDePessoas",
+      "RelativePath": "images/4-vetor#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "45fb8loyhe",
+      "Integrity": "mGJUalP4fqGRDvfUNJiutJ+ycCxn6rlMpV5wB5GJ45Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\4-vetor.jpg"
+    },
+    {
       "Identity": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\js\\site.js",
       "SourceId": "GerenciamentoDePessoas",
       "SourceType": "Discovered",
@@ -115,8 +199,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "k7d18d36eu",
-      "Integrity": "4PruX2F4fBWW0H9JTCiFE4QzlLBOOEoy28fyp9tDJDw=",
+      "Fingerprint": "llozw252oz",
+      "Integrity": "t2BxpFZtIbOy+KGJotoctC8MPZ+hAWmL4QczSo5LWQo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
@@ -1649,6 +1733,334 @@
       ]
     },
     {
+      "Route": "images/1-vetor.jpg",
+      "AssetFile": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\images\\1-vetor.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "175198"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"44aUjskRk51roTPLRv6hAofYLkcrA3NgkqLax5rf39Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 14:37:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-44aUjskRk51roTPLRv6hAofYLkcrA3NgkqLax5rf39Q="
+        }
+      ]
+    },
+    {
+      "Route": "images/1-vetor.nzynmwaqe9.jpg",
+      "AssetFile": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\images\\1-vetor.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "175198"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"44aUjskRk51roTPLRv6hAofYLkcrA3NgkqLax5rf39Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 14:37:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nzynmwaqe9"
+        },
+        {
+          "Name": "label",
+          "Value": "images/1-vetor.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-44aUjskRk51roTPLRv6hAofYLkcrA3NgkqLax5rf39Q="
+        }
+      ]
+    },
+    {
+      "Route": "images/2-vetor.jpg",
+      "AssetFile": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\images\\2-vetor.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17629"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qldNtZazjTnHdRBjQitFhrOHYOC1KMyzAaX/pUmQtRE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 14:38:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qldNtZazjTnHdRBjQitFhrOHYOC1KMyzAaX/pUmQtRE="
+        }
+      ]
+    },
+    {
+      "Route": "images/2-vetor.qb3iztn7yw.jpg",
+      "AssetFile": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\images\\2-vetor.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17629"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qldNtZazjTnHdRBjQitFhrOHYOC1KMyzAaX/pUmQtRE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 14:38:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qb3iztn7yw"
+        },
+        {
+          "Name": "label",
+          "Value": "images/2-vetor.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qldNtZazjTnHdRBjQitFhrOHYOC1KMyzAaX/pUmQtRE="
+        }
+      ]
+    },
+    {
+      "Route": "images/3-vetor.bqaill5sli.jpg",
+      "AssetFile": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\images\\3-vetor.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32923"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0/+9+WoMvMt0ifuLchowkzCT4QHZ7Xe0FGPvjdet+SA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 14:38:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bqaill5sli"
+        },
+        {
+          "Name": "label",
+          "Value": "images/3-vetor.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0/+9+WoMvMt0ifuLchowkzCT4QHZ7Xe0FGPvjdet+SA="
+        }
+      ]
+    },
+    {
+      "Route": "images/3-vetor.jpg",
+      "AssetFile": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\images\\3-vetor.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32923"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0/+9+WoMvMt0ifuLchowkzCT4QHZ7Xe0FGPvjdet+SA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 14:38:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0/+9+WoMvMt0ifuLchowkzCT4QHZ7Xe0FGPvjdet+SA="
+        }
+      ]
+    },
+    {
+      "Route": "images/4-vetor.45fb8loyhe.jpg",
+      "AssetFile": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\images\\4-vetor.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "81219"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mGJUalP4fqGRDvfUNJiutJ+ycCxn6rlMpV5wB5GJ45Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 14:38:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "45fb8loyhe"
+        },
+        {
+          "Name": "label",
+          "Value": "images/4-vetor.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mGJUalP4fqGRDvfUNJiutJ+ycCxn6rlMpV5wB5GJ45Y="
+        }
+      ]
+    },
+    {
+      "Route": "images/4-vetor.jpg",
+      "AssetFile": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\images\\4-vetor.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "81219"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mGJUalP4fqGRDvfUNJiutJ+ycCxn6rlMpV5wB5GJ45Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 14:38:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mGJUalP4fqGRDvfUNJiutJ+ycCxn6rlMpV5wB5GJ45Y="
+        }
+      ]
+    },
+    {
       "Route": "js/site.js",
       "AssetFile": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\js\\site.js",
       "Selectors": [],
@@ -1659,7 +2071,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "121"
+          "Value": "345"
         },
         {
           "Name": "Content-Type",
@@ -1667,11 +2079,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4PruX2F4fBWW0H9JTCiFE4QzlLBOOEoy28fyp9tDJDw=\""
+          "Value": "\"t2BxpFZtIbOy+KGJotoctC8MPZ+hAWmL4QczSo5LWQo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 17 Apr 2025 09:24:32 GMT"
+          "Value": "Thu, 17 Apr 2025 09:31:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1681,12 +2093,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4PruX2F4fBWW0H9JTCiFE4QzlLBOOEoy28fyp9tDJDw="
+          "Value": "sha256-t2BxpFZtIbOy+KGJotoctC8MPZ+hAWmL4QczSo5LWQo="
         }
       ]
     },
     {
-      "Route": "js/site.k7d18d36eu.js",
+      "Route": "js/site.llozw252oz.js",
       "AssetFile": "C:\\Repo\\GerenciamentoDePessoas\\GerenciamentoDePessoas\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1696,7 +2108,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "121"
+          "Value": "345"
         },
         {
           "Name": "Content-Type",
@@ -1704,11 +2116,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4PruX2F4fBWW0H9JTCiFE4QzlLBOOEoy28fyp9tDJDw=\""
+          "Value": "\"t2BxpFZtIbOy+KGJotoctC8MPZ+hAWmL4QczSo5LWQo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 17 Apr 2025 09:24:32 GMT"
+          "Value": "Thu, 17 Apr 2025 09:31:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1718,7 +2130,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "k7d18d36eu"
+          "Value": "llozw252oz"
         },
         {
           "Name": "label",
@@ -1726,7 +2138,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-4PruX2F4fBWW0H9JTCiFE4QzlLBOOEoy28fyp9tDJDw="
+          "Value": "sha256-t2BxpFZtIbOy+KGJotoctC8MPZ+hAWmL4QczSo5LWQo="
         }
       ]
     },
