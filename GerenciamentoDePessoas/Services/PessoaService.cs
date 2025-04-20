@@ -52,5 +52,10 @@ namespace GerenciamentoDePessoas.Services
             await _pessoaRepository.Apagar(pessoa);
         }
 
+        public async Task<int> BuscarTotal()
+        {
+            return await _pessoaRepository.BuscarTotal();
+        }
+
     }
 }

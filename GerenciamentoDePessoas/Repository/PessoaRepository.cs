@@ -91,5 +91,17 @@ namespace GerenciamentoDePessoas.Repository
             }
 
         }
+
+        public async Task<int> BuscarTotal()
+        {
+            try
+            {
+                return await _context.Pessoas.CountAsync();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

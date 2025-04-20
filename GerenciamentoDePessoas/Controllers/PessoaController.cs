@@ -119,22 +119,11 @@ namespace GerenciamentoDePessoas.Controllers
 
         }
 
-        [Route("Detalhes/{id:int}")]
-        public IActionResult DetalhesPessoa(int id)
+        [HttpGet("TotalPessoas")]
+        public async Task<ActionResult> TotalPessoas()
         {
-            ViewBag.texto = "Texto da tema de descrição";
-            ViewData["puxa"] = DateTime.Today;
-
-            TempData["SucessoRedirecionamento"] = "Sucesso";
-
-            var listaUsuario = new List<Pessoa>
-            {
-                new Pessoa { Id = 1, Nome = "Pedro", Sobrenome = "Silva", DataNascimento = DateTime.Now },
-                new Pessoa { Id = 2, Nome = "Maria", Sobrenome = "Silva", DataNascimento = DateTime.Now },
-                new Pessoa { Id = 3, Nome = "José", Sobrenome = "Silva", DataNascimento = DateTime.Now },
-                new Pessoa { Id = 4, Nome = "Paulo", Sobrenome = "Silva", DataNascimento = DateTime.Now }
-            };
-            return RedirectToAction("Index");
+            var totalPessoas = await _pessoasService.BuscarTotal();
+            return Ok(totalPessoas);
         }
 
         [HttpGet]

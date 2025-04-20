@@ -10,5 +10,6 @@ namespace GerenciamentoDePessoas.Services
         Task<Pessoa> BuscarPorId(int id);
         Task<Pessoa> Editar(Pessoa pessoa);
         Task Apagar(int id);
+        Task <int>BuscarTotal();
     }
 }
