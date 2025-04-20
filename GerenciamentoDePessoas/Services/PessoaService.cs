@@ -57,5 +57,16 @@ namespace GerenciamentoDePessoas.Services
             return await _pessoaRepository.BuscarTotal();
         }
 
+        public async Task<List<string>> BuscaPessoasNome(string termo)
+        {
+            var usuariosBanco = await _pessoaRepository.BuscaPessoasNome(termo);
+
+            var nomesCompletos = new List<string>();
+            foreach (var item in usuariosBanco)
+            {
+                nomesCompletos.Add($"{item.Nome} {item.Sobrenome}");
+            }
+            return nomesCompletos;
+        }
     }
 }

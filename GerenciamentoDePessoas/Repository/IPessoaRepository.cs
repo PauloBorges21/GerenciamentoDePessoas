@@ -11,4 +11,5 @@ public interface IPessoaRepository
     Task<Pessoa> Editar(Pessoa pessoa);
     Task Apagar(Pessoa pessoa);
     Task<int> BuscarTotal();
+    Task<List<Pessoa>> BuscaPessoasNome(string termo);
 }

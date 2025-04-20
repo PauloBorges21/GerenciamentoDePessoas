@@ -127,20 +127,11 @@ namespace GerenciamentoDePessoas.Controllers
         }
 
         [HttpGet]
-        [Route("BuscaPorUrl")]
-        public IActionResult BuscaPorUrl(string nome, string sobrenome)
+        [Route("BuscaPessoasNome")]
+        public async Task<JsonResult> BuscaPessoasNome(string termo)
         {
-            var listaUsuario = new List<Pessoa>
-            {
-                new Pessoa { Id = 1, Nome = "Pedro", Sobrenome = "Silva", DataNascimento = DateTime.Now },
-                new Pessoa { Id = 2, Nome = "Maria", Sobrenome = "Silva", DataNascimento = DateTime.Now },
-                new Pessoa { Id = 3, Nome = "José", Sobrenome = "Silva", DataNascimento = DateTime.Now },
-                new Pessoa { Id = 4, Nome = "Paulo", Sobrenome = "Silva", DataNascimento = DateTime.Now }
-            };
-
-            var pessoaSelecionada = listaUsuario.FirstOrDefault(n => n.Nome == nome && n.Sobrenome == sobrenome);
-
-            return View(pessoaSelecionada);
+            var resultDB = await _pessoasService.BuscaPessoasNome(termo);
+            return Json(resultDB);
         }
 
 

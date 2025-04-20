@@ -103,5 +103,23 @@ namespace GerenciamentoDePessoas.Repository
                 throw;
             }
         }
+
+        public async Task<List<Pessoa>> BuscaPessoasNome(string termo)
+        {
+            try
+            {
+                return await _context.Pessoas
+                .Where(p => EF.Functions.ILike(p.Nome, $"%{termo}%") ||
+                EF.Functions.ILike(p.Sobrenome, $"%{termo}%") ||
+                EF.Functions.ILike(p.CPF, $"%{termo}%"))
+                .OrderBy(p => p.Nome)
+                .ToListAsync();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

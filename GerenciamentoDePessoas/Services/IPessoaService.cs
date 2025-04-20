@@ -11,5 +11,6 @@ namespace GerenciamentoDePessoas.Services
         Task<Pessoa> Editar(Pessoa pessoa);
         Task Apagar(int id);
         Task <int>BuscarTotal();
+        Task<List<string>>BuscaPessoasNome(string termo);
     }
 }
