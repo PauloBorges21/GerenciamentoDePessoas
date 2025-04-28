@@ -28,6 +28,7 @@ packages/
 *.localsettings.json
 appsettings.*.json
 appsettings.Development.json
+.env
 
 ## Arquivos do Rider/JetBrains ##
 .idea/

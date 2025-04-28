@@ -1,10 +1,12 @@
 ﻿using GerenciamentoDePessoas.Converters;
 using GerenciamentoDePessoas.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace GerenciamentoDePessoas.Data
 {
-    public class GerenciamentoDePessoasContext : DbContext
+    public class GerenciamentoDePessoasContext : IdentityDbContext<Usuario>
     {
         /// <summary>
         /// Método chamado automaticamente pelo Entity Framework na construção do modelo.
@@ -13,6 +15,14 @@ namespace GerenciamentoDePessoas.Data
         /// <param name="modelBuilder">Objeto usado para configurar o modelo (entidades, propriedades, relacionamentos, etc).</param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            var administrador = new IdentityRole("administrador");
+            administrador.NormalizedName = "ADMINSTRADOR";
+
+            var operador = new IdentityRole("operador");
+            operador.NormalizedName = "OPERADOR";
+
+            modelBuilder.Entity<IdentityRole>().HasData(administrador, operador);
+
             //Loop por cada entidade de entidade no modelo(ex Pessoa)
             foreach (var entityType in modelBuilder.Model.GetEntityTypes())
             {
@@ -30,11 +40,14 @@ namespace GerenciamentoDePessoas.Data
             }
             // Chama o método base para garantir que outras configurações padrão sejam aplicadas
             base.OnModelCreating(modelBuilder);
+
         }
         public GerenciamentoDePessoasContext(DbContextOptions<GerenciamentoDePessoasContext> options) : base(options)
         {
 
         }
-        public DbSet<Pessoa> Pessoas { get; set; }
+        public DbSet<Pessoa> Pessoas { get; set; } = default!;
+
+
     }
 }

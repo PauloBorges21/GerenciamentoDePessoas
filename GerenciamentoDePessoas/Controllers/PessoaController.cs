@@ -1,11 +1,13 @@
 ﻿using GerenciamentoDePessoas.Models;
 using GerenciamentoDePessoas.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace GerenciamentoDePessoas.Controllers
 {
     [Route("Pessoa")]
+    [Authorize]
     public class PessoaController : Controller
     {
         private readonly IPessoaService _pessoasService;
